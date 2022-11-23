@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Banco xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <listaClientes>
+    <Cliente>
+      <dni>12345678A</dni>
+      <nombre>Carlos</nombre>
+      <direccion>afwafwwf</direccion>
+      <edad>7</edad>
+      <telefono>12124124</telefono>
+      <cuentaCorriente>125125125</cuentaCorriente>
+    </Cliente>
+    <Cliente>
+      <dni>12345678A</dni>
+      <nombre>Carlos</nombre>
+      <direccion>wafawf</direccion>
+      <edad>6</edad>
+      <telefono>124124124</telefono>
+      <cuentaCorriente>124124124</cuentaCorriente>
+    </Cliente>
+    <Cliente>
+      <dni>12345678A</dni>
+      <nombre>Carlos</nombre>
+      <direccion>Calle 1</direccion>
+      <edad>7</edad>
+      <telefono>123454675</telefono>
+      <cuentaCorriente>12412412</cuentaCorriente>
+    </Cliente>
+  </listaClientes>
+</Banco>
