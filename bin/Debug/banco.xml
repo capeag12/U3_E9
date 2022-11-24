@@ -2,12 +2,12 @@
 <Banco xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <listaClientes>
     <Cliente>
-      <dni>12345678A</dni>
-      <nombre>asdawdaw</nombre>
-      <direccion>wdawdawdaw</direccion>
-      <edad>4</edad>
-      <telefono>124124</telefono>
-      <cuentaCorriente>124124124</cuentaCorriente>
+      <dni>89423456F</dni>
+      <nombre>Carelos</nombre>
+      <direccion>1afawfawf</direccion>
+      <edad>7</edad>
+      <telefono>53253235</telefono>
+      <cuentaCorriente>35235235235</cuentaCorriente>
     </Cliente>
   </listaClientes>
 </Banco>

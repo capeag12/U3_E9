@@ -9,3 +9,15 @@ C:\Users\Dam\Desktop\2 DAM\Desarrollo de interfaces\U3_E9\obj\Debug\U3_E9.csproj
 C:\Users\Dam\Desktop\2 DAM\Desarrollo de interfaces\U3_E9\obj\Debug\U3_E9.csproj.CoreCompileInputs.cache
 C:\Users\Dam\Desktop\2 DAM\Desarrollo de interfaces\U3_E9\obj\Debug\U3_E9.exe
 C:\Users\Dam\Desktop\2 DAM\Desarrollo de interfaces\U3_E9\obj\Debug\U3_E9.pdb
+D:\Instituto\3er anno-Segundo\Desarrollo de interfaces\U3_E9\bin\Debug\U3_E9.exe.config
+D:\Instituto\3er anno-Segundo\Desarrollo de interfaces\U3_E9\bin\Debug\U3_E9.exe
+D:\Instituto\3er anno-Segundo\Desarrollo de interfaces\U3_E9\bin\Debug\U3_E9.pdb
+D:\Instituto\3er anno-Segundo\Desarrollo de interfaces\U3_E9\obj\Debug\U3_E9.csproj.AssemblyReference.cache
+D:\Instituto\3er anno-Segundo\Desarrollo de interfaces\U3_E9\obj\Debug\U3_E9.csproj.SuggestedBindingRedirects.cache
+D:\Instituto\3er anno-Segundo\Desarrollo de interfaces\U3_E9\obj\Debug\U3_E9.Form1.resources
+D:\Instituto\3er anno-Segundo\Desarrollo de interfaces\U3_E9\obj\Debug\U3_E9.Properties.Resources.resources
+D:\Instituto\3er anno-Segundo\Desarrollo de interfaces\U3_E9\obj\Debug\U3_E9.csproj.GenerateResource.cache
+D:\Instituto\3er anno-Segundo\Desarrollo de interfaces\U3_E9\obj\Debug\U3_E9.csproj.CoreCompileInputs.cache
+D:\Instituto\3er anno-Segundo\Desarrollo de interfaces\U3_E9\obj\Debug\U3_E9.exe
+D:\Instituto\3er anno-Segundo\Desarrollo de interfaces\U3_E9\obj\Debug\U3_E9.pdb
+D:\Instituto\3er anno-Segundo\Desarrollo de interfaces\U3_E9\obj\Debug\U3_E9.ModOrRemove.resources

@@ -19,7 +19,8 @@ namespace U3_E9
         Banco banco;
         public Form1()
         {
-            InitializeComponent(); this.ActiveControl = btnAdd;
+            InitializeComponent(); 
+            this.ActiveControl = btnAdd;
             FileInfo archivo = new FileInfo("banco.xml");
             bool existe = archivo.Exists;
             string path = archivo.FullName;
@@ -42,7 +43,7 @@ namespace U3_E9
                                 
             }
             ActualizarDataGrid();
-            actualizarComboBox();
+            
 
         }
 
@@ -92,14 +93,6 @@ namespace U3_E9
             errorProvider1.SetError(txtNombre, "");
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
-            
-            
-            
-        }
-
         private void ActualizarDataGrid() {
             
             datos.DataSource = null;
@@ -107,13 +100,7 @@ namespace U3_E9
             datos.DataSource = banco.listaClientes;
             Console.WriteLine();
 
-        }
-
-        private void actualizarComboBox()
-        {
-            comboBoxDNI.DataSource = banco.listaClientes;
-           
-        }
+        }      
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -126,9 +113,12 @@ namespace U3_E9
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void btnSec_Click(object sender, EventArgs e)
         {
-            ActualizarDataGrid();  
+            ModOrRemove mod = new ModOrRemove();
+            this.Close();
+            
+            
         }
     }
 }

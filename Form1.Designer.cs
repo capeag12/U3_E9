@@ -42,11 +42,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtCuenta = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnBorrar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.comboBoxDNI = new System.Windows.Forms.ComboBox();
             this.datos = new System.Windows.Forms.DataGridView();
+            this.btnSec = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numEdad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datos)).BeginInit();
@@ -154,7 +152,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(344, 78);
+            this.btnAdd.Location = new System.Drawing.Point(386, 78);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 13;
@@ -162,35 +160,9 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // btnModificar
-            // 
-            this.btnModificar.Location = new System.Drawing.Point(460, 78);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 14;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            // 
-            // btnBorrar
-            // 
-            this.btnBorrar.Location = new System.Drawing.Point(564, 78);
-            this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(75, 23);
-            this.btnBorrar.TabIndex = 15;
-            this.btnBorrar.Text = "Borrar";
-            this.btnBorrar.UseVisualStyleBackColor = true;
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // comboBoxDNI
-            // 
-            this.comboBoxDNI.FormattingEnabled = true;
-            this.comboBoxDNI.Location = new System.Drawing.Point(12, 122);
-            this.comboBoxDNI.Name = "comboBoxDNI";
-            this.comboBoxDNI.Size = new System.Drawing.Size(152, 21);
-            this.comboBoxDNI.TabIndex = 17;
             // 
             // datos
             // 
@@ -200,15 +172,23 @@
             this.datos.Size = new System.Drawing.Size(644, 289);
             this.datos.TabIndex = 18;
             // 
+            // btnSec
+            // 
+            this.btnSec.Location = new System.Drawing.Point(519, 78);
+            this.btnSec.Name = "btnSec";
+            this.btnSec.Size = new System.Drawing.Size(120, 23);
+            this.btnSec.TabIndex = 19;
+            this.btnSec.Text = "Eliminar o editar";
+            this.btnSec.UseVisualStyleBackColor = true;
+            this.btnSec.Click += new System.EventHandler(this.btnSec_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(668, 450);
+            this.Controls.Add(this.btnSec);
             this.Controls.Add(this.datos);
-            this.Controls.Add(this.comboBoxDNI);
-            this.Controls.Add(this.btnBorrar);
-            this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtCuenta);
@@ -224,9 +204,7 @@
             this.Controls.Add(this.txtDNI);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numEdad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.datos)).EndInit();
@@ -249,11 +227,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCuenta;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnModificar;
-        private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.ComboBox comboBoxDNI;
         private System.Windows.Forms.DataGridView datos;
+        private System.Windows.Forms.Button btnSec;
     }
 }
 

@@ -29,8 +29,15 @@ namespace U3_E9
             this.cuentaCorriente = cuentaCorriente;
         }
 
+        public override bool Equals(object obj)
+        {
+            return obj is Cliente cliente &&
+                   dni == cliente.dni;
+        }
 
-
-        
+        public override int GetHashCode()
+        {
+            return 1456690394 + EqualityComparer<string>.Default.GetHashCode(dni);
+        }
     }
 }
