@@ -111,6 +111,8 @@ namespace U3_E9
 
         private void actualizarComboBox()
         {
+            comboBoxDNI.DataSource = banco.listaClientes;
+           
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
