@@ -19,14 +19,14 @@ namespace U3_E9
         Banco banco;
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent(); this.ActiveControl = btnAdd;
             FileInfo archivo = new FileInfo("banco.xml");
             bool existe = archivo.Exists;
             string path = archivo.FullName;
             if (existe == false)
             {
                 banco = new Banco();
-                ActualizarDataGrid();
+                
             }
             else
             {
@@ -38,10 +38,12 @@ namespace U3_E9
                     stream.Close();
                 }
                 
-                ActualizarDataGrid();
+                
                                 
             }
-            
+            ActualizarDataGrid();
+            actualizarComboBox();
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -50,13 +52,14 @@ namespace U3_E9
             Cliente c = new Cliente(txtDNI.Text, txtNombre.Text, txtDireccion.Text, (int)numEdad.Value, txtTel.Text, txtCuenta.Text);
 
             banco.añadirCliente(c);
-            ActualizarDataGrid();
+            
             txtDNI.Text = "";
             txtNombre.Text = "";
             txtDireccion.Text = "";
             numEdad.Value = 0;
             txtTel.Text = "";
             txtCuenta.Text = "";
+            ActualizarDataGrid();
 
         }
 
@@ -98,16 +101,16 @@ namespace U3_E9
         }
 
         private void ActualizarDataGrid() {
-            BindingList<Cliente> listaBind = new BindingList<Cliente>(banco.listaClientes);
-            BindingSource source = new BindingSource(listaBind, null);
-            gridDatos.DataSource = source;
-            gridDatos.Refresh();
             
+            datos.DataSource = null;
+           
+            datos.DataSource = banco.listaClientes;
+            Console.WriteLine();
+
         }
 
         private void actualizarComboBox()
         {
-            
         }
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
@@ -119,6 +122,11 @@ namespace U3_E9
                 serializer.Serialize(stream, banco);
                 stream.Close();
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ActualizarDataGrid();  
         }
     }
 }

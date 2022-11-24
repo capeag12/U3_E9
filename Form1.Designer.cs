@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.gridDatos = new System.Windows.Forms.DataGridView();
             this.txtDNI = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,18 +46,11 @@
             this.btnBorrar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.comboBoxDNI = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.gridDatos)).BeginInit();
+            this.datos = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.numEdad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // gridDatos
-            // 
-            this.gridDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridDatos.Location = new System.Drawing.Point(12, 173);
-            this.gridDatos.Name = "gridDatos";
-            this.gridDatos.Size = new System.Drawing.Size(627, 265);
-            this.gridDatos.TabIndex = 0;
             // 
             // txtDNI
             // 
@@ -200,11 +192,20 @@
             this.comboBoxDNI.Size = new System.Drawing.Size(152, 21);
             this.comboBoxDNI.TabIndex = 17;
             // 
+            // datos
+            // 
+            this.datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datos.Location = new System.Drawing.Point(12, 149);
+            this.datos.Name = "datos";
+            this.datos.Size = new System.Drawing.Size(644, 289);
+            this.datos.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(668, 450);
+            this.Controls.Add(this.datos);
             this.Controls.Add(this.comboBoxDNI);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnModificar);
@@ -221,22 +222,20 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDNI);
-            this.Controls.Add(this.gridDatos);
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.gridDatos)).EndInit();
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numEdad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView gridDatos;
         private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -254,6 +253,7 @@
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ComboBox comboBoxDNI;
+        private System.Windows.Forms.DataGridView datos;
     }
 }
 
