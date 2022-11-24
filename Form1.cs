@@ -116,9 +116,31 @@ namespace U3_E9
         private void btnSec_Click(object sender, EventArgs e)
         {
             ModOrRemove mod = new ModOrRemove();
-            this.Close();
-            
-            
+            mod.ShowDialog();
+
+            FileInfo archivo = new FileInfo("banco.xml");
+            bool existe = archivo.Exists;
+            string path = archivo.FullName;
+            if (existe == false)
+            {
+                banco = new Banco();
+
+            }
+            else
+            {
+                //Deserializo el banco
+                XmlSerializer serializer = new XmlSerializer(typeof(Banco));
+                using (var stream = new FileStream("banco.xml", FileMode.Open))
+                {
+                    banco = (Banco)serializer.Deserialize(stream);
+                    stream.Close();
+                }
+
+
+
+            }
+            ActualizarDataGrid();
+
         }
     }
 }
