@@ -146,6 +146,7 @@
             // 
             // comboDNI
             // 
+            this.comboDNI.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboDNI.FormattingEnabled = true;
             this.comboDNI.Location = new System.Drawing.Point(8, 111);
             this.comboDNI.Name = "comboDNI";
@@ -206,7 +207,6 @@
             this.Controls.Add(this.txtDNI);
             this.Name = "ModOrRemove";
             this.Text = "ModOrRemove";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ModOrRemove_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.numEdad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

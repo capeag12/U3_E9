@@ -94,10 +94,9 @@ namespace U3_E9
         }
 
         private void ActualizarDataGrid() {
-            
-            datos.DataSource = null;
-           
-            datos.DataSource = banco.listaClientes;
+            BindingList<Cliente> listaClientes = new BindingList<Cliente>(banco.listaClientes);
+            dataGridView1.DataSource = listaClientes;
+            dataGridView1.Refresh();
             Console.WriteLine();
 
         }      
@@ -115,32 +114,58 @@ namespace U3_E9
 
         private void btnSec_Click(object sender, EventArgs e)
         {
-            ModOrRemove mod = new ModOrRemove();
+            ModOrRemove mod = new ModOrRemove(banco);
             mod.ShowDialog();
-
-            FileInfo archivo = new FileInfo("banco.xml");
-            bool existe = archivo.Exists;
-            string path = archivo.FullName;
-            if (existe == false)
-            {
-                banco = new Banco();
-
-            }
-            else
-            {
-                //Deserializo el banco
-                XmlSerializer serializer = new XmlSerializer(typeof(Banco));
-                using (var stream = new FileStream("banco.xml", FileMode.Open))
-                {
-                    banco = (Banco)serializer.Deserialize(stream);
-                    stream.Close();
-                }
-
-
-
-            }
+            banco = mod.Banco;
             ActualizarDataGrid();
+            Console.WriteLine();
+        }
 
+        private void txtDireccion_Validating(object sender, CancelEventArgs e)
+        {
+            if (Regex.IsMatch(txtDireccion.Text, @"^\w+$") == false)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtDireccion, "El formato es incorrecto");
+            }
+        }
+
+        private void txtDireccion_Validated(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtDireccion, "");
+        }
+
+        private void txtTel_Validating(object sender, CancelEventArgs e)
+        {
+            if (Regex.IsMatch(txtTel.Text, @"^[0-9]{9}$") == false)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtTel, "El formato es incorrecto");
+            }
+        }
+
+        private void txtTel_Validated(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtTel, "");
+        }
+
+        private void txtCuenta_Validated(object sender, EventArgs e)
+        {
+            errorProvider1.SetError(txtCuenta, "");
+        }
+
+        private void txtCuenta_Validating(object sender, CancelEventArgs e)
+        {
+            if (Regex.IsMatch(txtCuenta.Text, @"^[0-9]{10}$") == false)
+            {
+                e.Cancel = true;
+                errorProvider1.SetError(txtCuenta, "El formato es incorrecto");
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ActualizarDataGrid();
         }
     }
 }

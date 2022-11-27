@@ -17,31 +17,13 @@ namespace U3_E9
         Banco banco;
         Cliente clienteElegido;
         int indiceElegido;
-        public ModOrRemove()
+        public ModOrRemove(Banco b)
         {
             InitializeComponent();
-            FileInfo archivo = new FileInfo("banco.xml");
-            bool existe = archivo.Exists;
-            string path = archivo.FullName;
-            if (existe == false)
-            {
-                banco = new Banco();
-
-            }
-            else
-            {
-                //Deserializo el banco
-                XmlSerializer serializer = new XmlSerializer(typeof(Banco));
-                using (var stream = new FileStream("banco.xml", FileMode.Open))
-                {
-                    banco = (Banco)serializer.Deserialize(stream);
-                    stream.Close();
-                }
-
-                actualizarComboBox();
-
-
-            }
+            
+            banco = b;
+            Console.WriteLine();
+            actualizarComboBox();
         }
 
         private void actualizarComboBox()
@@ -84,13 +66,14 @@ namespace U3_E9
             txtTel.Text = "";
             txtCuenta.Text = "";
             comboDNI.SelectedIndex = -1;
+            
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
             banco.listaClientes[indiceElegido].nombre = txtNombre.Text;
             banco.listaClientes[indiceElegido].cuentaCorriente = txtCuenta.Text;
-            banco.listaClientes[indiceElegido].direccion = txtCuenta.Text;
+            banco.listaClientes[indiceElegido].direccion = txtDireccion.Text;
             banco.listaClientes[indiceElegido].edad = (int)numEdad.Value;
             banco.listaClientes[indiceElegido].telefono = txtTel.Text;
             actualizarComboBox();
@@ -101,23 +84,17 @@ namespace U3_E9
             txtTel.Text = "";
             txtCuenta.Text = "";
             comboDNI.SelectedIndex = -1;
+            
 
         }
 
-        private void ModOrRemove_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            XmlSerializer serializer = new XmlSerializer(typeof(Banco));
-            using (var stream = new FileStream("banco.xml", FileMode.Create))
-            {
-
-                serializer.Serialize(stream, banco);
-                stream.Close();
-            }
-        }
+       
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        public Banco Banco { get { return this.banco; } }
     }
 }

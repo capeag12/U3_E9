@@ -43,11 +43,11 @@
             this.txtCuenta = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.datos = new System.Windows.Forms.DataGridView();
             this.btnSec = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.numEdad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtDNI
@@ -101,6 +101,8 @@
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(168, 20);
             this.txtDireccion.TabIndex = 5;
+            this.txtDireccion.Validating += new System.ComponentModel.CancelEventHandler(this.txtDireccion_Validating);
+            this.txtDireccion.Validated += new System.EventHandler(this.txtDireccion_Validated);
             // 
             // numEdad
             // 
@@ -133,6 +135,8 @@
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(152, 20);
             this.txtTel.TabIndex = 9;
+            this.txtTel.Validating += new System.ComponentModel.CancelEventHandler(this.txtTel_Validating);
+            this.txtTel.Validated += new System.EventHandler(this.txtTel_Validated);
             // 
             // label6
             // 
@@ -149,6 +153,8 @@
             this.txtCuenta.Name = "txtCuenta";
             this.txtCuenta.Size = new System.Drawing.Size(168, 20);
             this.txtCuenta.TabIndex = 11;
+            this.txtCuenta.Validating += new System.ComponentModel.CancelEventHandler(this.txtCuenta_Validating);
+            this.txtCuenta.Validated += new System.EventHandler(this.txtCuenta_Validated);
             // 
             // btnAdd
             // 
@@ -164,14 +170,6 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // datos
-            // 
-            this.datos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datos.Location = new System.Drawing.Point(12, 149);
-            this.datos.Name = "datos";
-            this.datos.Size = new System.Drawing.Size(644, 289);
-            this.datos.TabIndex = 18;
-            // 
             // btnSec
             // 
             this.btnSec.Location = new System.Drawing.Point(519, 78);
@@ -182,13 +180,21 @@
             this.btnSec.UseVisualStyleBackColor = true;
             this.btnSec.Click += new System.EventHandler(this.btnSec_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 126);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(627, 282);
+            this.dataGridView1.TabIndex = 20;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(668, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSec);
-            this.Controls.Add(this.datos);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtCuenta);
@@ -205,9 +211,10 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numEdad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,8 +235,8 @@
         private System.Windows.Forms.TextBox txtCuenta;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.DataGridView datos;
         private System.Windows.Forms.Button btnSec;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

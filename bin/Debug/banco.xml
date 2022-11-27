@@ -1,4 +1,21 @@
 <?xml version="1.0"?>
 <Banco xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <listaClientes />
+  <listaClientes>
+    <Cliente>
+      <dni>12345678A</dni>
+      <nombre>Carlos</nombre>
+      <direccion>Call</direccion>
+      <edad>7</edad>
+      <telefono>132345678</telefono>
+      <cuentaCorriente>123456789</cuentaCorriente>
+    </Cliente>
+    <Cliente>
+      <dni>12345678F</dni>
+      <nombre>Pedro</nombre>
+      <direccion>Calle</direccion>
+      <edad>6</edad>
+      <telefono>122345678</telefono>
+      <cuentaCorriente>1234567890</cuentaCorriente>
+    </Cliente>
+  </listaClientes>
 </Banco>
