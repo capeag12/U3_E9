@@ -21,3 +21,4 @@ D:\Instituto\3er anno-Segundo\Desarrollo de interfaces\U3_E9\obj\Debug\U3_E9.csp
 D:\Instituto\3er anno-Segundo\Desarrollo de interfaces\U3_E9\obj\Debug\U3_E9.exe
 D:\Instituto\3er anno-Segundo\Desarrollo de interfaces\U3_E9\obj\Debug\U3_E9.pdb
 D:\Instituto\3er anno-Segundo\Desarrollo de interfaces\U3_E9\obj\Debug\U3_E9.ModOrRemove.resources
+C:\Users\Dam\Desktop\2 DAM\Desarrollo de interfaces\U3_E9\obj\Debug\U3_E9.ModOrRemove.resources
